@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerBounce : MonoBehaviour
 {
     [SerializeField] private float m_radius = 1.0f;
+    [SerializeField] private float m_force = 50.0f;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
 		
 	}
@@ -18,7 +19,7 @@ public class PlayerBounce : MonoBehaviour
 		
 	}
 
-    public void CheckBounceClick(Vector2 click_position)
+    public void CheckBounceClick(Vector2 click_position, int player_id)
     {
         Vector2 pos = this.transform.position;
 
@@ -29,7 +30,7 @@ public class PlayerBounce : MonoBehaviour
             dir.Normalize();
             var rb2d = this.GetComponent<Rigidbody2D>();
 
-            rb2d.AddForce(dir * Time.deltaTime * 100.0f);
+            rb2d.AddForce(dir * m_force);
         }
     }
 }
