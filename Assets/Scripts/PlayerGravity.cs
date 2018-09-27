@@ -27,27 +27,27 @@ public class PlayerGravity : MonoBehaviour
 
     private void Update()
     {
-        if (m_reverse_gravity)
-        {
-            var rigidbody = this.GetComponent<Rigidbody2D>();
-            if (!rigidbody)
-            {
-                Debug.Log("No Rigidbody on " + this.name);
-                return;
-            }
+        //if (m_reverse_gravity)
+        //{
+        //    var rigidbody = this.GetComponent<Rigidbody2D>();
+        //    if (!rigidbody)
+        //    {
+        //        Debug.Log("No Rigidbody on " + this.name);
+        //        return;
+        //    }
 
-            rigidbody.gravityScale = -1;
-        }
-        else
-        {
-            var rigidbody = this.GetComponent<Rigidbody2D>();
-            if (!rigidbody)
-            {
-                Debug.Log("No Rigidbody on " + this.name);
-                return;
-            }
+        //    rigidbody.gravityScale = -1;
+        //}
+        //else
+        //{
+        //    var rigidbody = this.GetComponent<Rigidbody2D>();
+        //    if (!rigidbody)
+        //    {
+        //        Debug.Log("No Rigidbody on " + this.name);
+        //        return;
+        //    }
 
-            rigidbody.gravityScale = 1;
-        }
+        //    rigidbody.gravityScale = 1;
+        //}
     }
 }
